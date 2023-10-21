@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "helloreact",
+    "entryPoint": "./app/index.js",
     "slug": "helloreact",
     "version": "1.0.0",
     "orientation": "portrait",

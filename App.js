@@ -1,28 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import SvgUri from 'react-native-svg-uri';
-import collab from './assets/collaboration.svg'
 
-export default function App() {
+import {
+  SafeAreaView,
+  StyleSheet,
+ 
+} from "react-native";
+import Constants from 'expo-constants'
+import { FlatList, Image, Button } from "react-native";
+import ImageSlider from "./components/ImageSlider";
+import React, { Component } from "react";
+
+const height=Constants.statusBarHeight
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text >Hello woerl!</Text>
-      {/* <SvgUri
-    width="200"
-    height="200"
-    svgXmlData={collab}
-  /> */}
-
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ImageSlider />
+      <StatusBar style="default"/>
+    </SafeAreaView>
   );
-}
-
+};
+export default App;
 const styles = StyleSheet.create({
   container: {
+    marginTop:height,
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
