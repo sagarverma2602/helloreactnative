@@ -5,6 +5,7 @@ import {
   Image,
   useWindowDimensions,
   Button,
+  Pressable,
 } from "react-native";
 import React from "react";
 
@@ -20,14 +21,20 @@ export default function ImageSlides({ item }) {
       <View style={{ flex: 0.3 }}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.desc}>{item.desc}</Text>
-        <Button color='#5A189A' title={item.btn} style={styles.btn}></Button>
+        <Pressable color='#5A189A' title={item.btn} style={styles.btn}><Text style={styles.btntext}>Next</Text></Pressable>
       </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
     btn:{
-      width:'50', 
+      alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'black',
     },
   container: {
     flex: 1,

@@ -8,6 +8,7 @@ import Constants from 'expo-constants'
 import { FlatList, Image, Button } from "react-native";
 import ImageSlider from "./components/ImageSlider";
 import React, { Component } from "react";
+import { StatusBar } from "expo-status-bar";
 
 const height=Constants.statusBarHeight
 const App = () => {
