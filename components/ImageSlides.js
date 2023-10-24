@@ -6,6 +6,7 @@ import {
   useWindowDimensions,
   Button,
   Pressable,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 
@@ -21,7 +22,18 @@ export default function ImageSlides({ item }) {
       <View style={{ flex: 0.3 }}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.desc}>{item.desc}</Text>
-        <Pressable color='#5A189A' title={item.btn} style={styles.btn}><Text style={styles.btntext}>Next</Text></Pressable>
+        {/* <Button  title={item.btn} style={styles.btn} /> */}
+        <TouchableOpacity onPress={() => {/* do this */}}>
+        <View style={{
+            backgroundColor: '#274C77',
+            alignItems: 'center', 
+            justifyContent: 'center',
+            borderRadius: 10
+          }}
+        >
+          <Text style={{ color: 'white' ,fontSize:22,paddingVertical:5,width:200,textAlign:'center'}}>{item.btn}</Text>
+        </View>
+</TouchableOpacity>
       </View>
     </View>
   );
@@ -34,7 +46,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'black',
+    fontSize:28,
+    color: '#274C77',
+    
+    
+    },
+    btntext:{
+      color:'#fff',
+      fontSize:22,
     },
   container: {
     flex: 1,
